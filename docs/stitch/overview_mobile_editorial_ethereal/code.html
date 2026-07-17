@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Folio | Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e3e3de",
+                        "inverse-surface": "#2f312e",
+                        "on-surface-variant": "#504442",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-primary-container": "#ae8d87",
+                        "on-secondary-container": "#766057",
+                        "on-tertiary-container": "#9c938f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ddc1b7",
+                        "on-tertiary-fixed-variant": "#4c4542",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-container-high": "#e8e8e3",
+                        "on-background": "#1a1c19",
+                        "on-primary-fixed": "#2b1613",
+                        "primary-container": "#3e2723",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeee9",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f4ef",
+                        "primary": "#271310",
+                        "surface": "#fafaf5",
+                        "tertiary-fixed": "#ece0dc",
+                        "on-surface": "#1a1c19",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e3e3de",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fafaf5",
+                        "tertiary": "#1d1815",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#201a18",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-container": "#fadcd2",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed-dim": "#cfc4c0",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-secondary-fixed": "#271812",
+                        "surface-tint": "#745853",
+                        "outline-variant": "#d3c3c0",
+                        "surface-dim": "#dadad5",
+                        "secondary-fixed": "#fadcd2",
+                        "outline": "#827472",
+                        "secondary": "#6f5a52",
+                        "tertiary-container": "#322c29",
+                        "on-secondary-fixed-variant": "#56423b",
+                        "background": "#fafaf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-md": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        body {
+            background-color: #fafaf5;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar (Mobile Shell) -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] px-margin-mobile py-4 flex justify-between items-center md:hidden">
+<h1 class="font-headline-md text-headline-sm text-primary">Academic Folio</h1>
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+<span class="material-symbols-outlined text-primary">settings</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-margin-mobile flex flex-col gap-8">
+<!-- Student Profile Card -->
+<section class="glass-card p-6 rounded-xl flex flex-col items-center text-center gap-4">
+<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary-fixed ring-4 ring-surface shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a young male doctoral student with a warm, focused expression. He is wearing a dark, minimalist blazer against a soft cream-colored background. The lighting is soft and high-key, reflecting an academic and sophisticated atmosphere consistent with a luxury editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2EjQAoTMFnIxr1sx9EOu1SBxfyiYjulVEEkX4BQehsiw8htsxeKSzyQOFHSbry_FDJ-67rYtY-F0IXNBSqbRD33PJnqFqA29pv4CFo31lW6E8JhzaNcIEdo1D_KowYkw6bOrQZza6m_G4yRQhj4bHbVGpgb4KoRpTejAcnPIO7LW_ELOhOIqHG6sajlajMjTXIhWIklk_Hvu-JWiG14Bqc3A2Y8NYoS2w4OnZ1_eqf0UIJisGfOH4s-AXnnz4vKi-8Rmd-7VOgkOW"/>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Julian Vance</h2>
+<p class="font-label-md text-label-md text-on-surface-variant tracking-wider">DOCTORAL CANDIDATE</p>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-lg font-label-md text-label-md">Public Health</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-lg font-label-md text-label-md">Year 3</span>
+</div>
+</section>
+<!-- Mastery Level Metric -->
+<section class="glass-card p-6 rounded-xl flex flex-col gap-4 relative overflow-hidden">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Mastery Level</h3>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-primary">92%</p>
+</div>
+<div class="pb-1">
+<span class="text-primary font-bold font-label-md">+4.2% this term</span>
+</div>
+</div>
+<!-- Simple Progress Track -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%] transition-all duration-1000 ease-out"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">You are currently in the top 5% of your cohort's research output.</p>
+</section>
+<!-- Module Navigation (Vertical Stack for Mobile) -->
+<section class="flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Academic Modules</h3>
+<!-- Assignments -->
+<button class="glass-card p-5 rounded-xl flex items-center justify-between group hover:bg-primary transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<div class="text-left">
+<span class="block font-body-lg text-body-lg text-primary group-hover:text-on-primary">Assignments</span>
+<span class="block font-label-md text-label-md text-on-surface-variant group-hover:text-on-primary/70">3 Pending Review</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary">chevron_right</span>
+</button>
+<!-- Evidence -->
+<button class="glass-card p-5 rounded-xl flex items-center justify-between group hover:bg-primary transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-secondary-fixed flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="text-left">
+<span class="block font-body-lg text-body-lg text-primary group-hover:text-on-primary">Evidence</span>
+<span class="block font-label-md text-label-md text-on-surface-variant group-hover:text-on-primary/70">12 Verified Artifacts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary">chevron_right</span>
+</button>
+<!-- Rubric -->
+<button class="glass-card p-5 rounded-xl flex items-center justify-between group hover:bg-primary transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:bg-tertiary-container group-hover:text-on-tertiary-container">
+<span class="material-symbols-outlined">rule</span>
+</div>
+<div class="text-left">
+<span class="block font-body-lg text-body-lg text-primary group-hover:text-on-primary">Rubric</span>
+<span class="block font-label-md text-label-md text-on-surface-variant group-hover:text-on-primary/70">Assessment Criteria</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary">chevron_right</span>
+</button>
+</section>
+<!-- Recent Achievement -->
+<section class="glass-card rounded-xl overflow-hidden shadow-xl border-l-4 border-l-primary">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-widest">Recent Achievement</h3>
+</div>
+<div class="flex gap-4">
+<div class="flex-1">
+<h4 class="font-headline-sm text-headline-sm text-primary leading-tight mb-2">Excellence in Qualitative Analysis</h4>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-90">Awarded for the structural integrity and theoretical depth of the recent 'Urban Health' publication.</p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">March 14, 2024</span>
+<button class="text-primary font-bold font-label-md border-b border-primary pb-1">View Details</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Shell) -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-t border-on-surface-variant/10 px-6 py-4 md:hidden">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<!-- Overview (Active) -->
+<a class="flex flex-col items-center gap-1 bg-primary text-on-primary rounded-xl px-4 py-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-md text-[10px] uppercase font-bold">Overview</span>
+</a>
+<!-- Publications -->
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-[10px] uppercase">Pubs</span>
+</a>
+<!-- Research -->
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">science</span>
+<span class="font-label-md text-[10px] uppercase">Research</span>
+</a>
+<!-- Archives -->
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-[10px] uppercase">Archive</span>
+</a>
+<!-- Contact -->
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-[10px] uppercase">Contact</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button (Contextual for Overview: Add Publication/Entry) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center shadow-2xl active:scale-95 transition-transform duration-200 z-40">
+<span class="material-symbols-outlined">add</span>
+</button>
+<script>
+        // Micro-interaction for scroll depth awareness
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-[0_4px_30px_rgba(62,39,35,0.08)]');
+            } else {
+                header.classList.remove('shadow-[0_4px_30px_rgba(62,39,35,0.08)]');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Folio | Julian Vance Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e3e3de",
+                        "inverse-surface": "#2f312e",
+                        "on-surface-variant": "#504442",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-primary-container": "#ae8d87",
+                        "on-secondary-container": "#766057",
+                        "on-tertiary-container": "#9c938f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ddc1b7",
+                        "on-tertiary-fixed-variant": "#4c4542",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-container-high": "#e8e8e3",
+                        "on-background": "#1a1c19",
+                        "on-primary-fixed": "#2b1613",
+                        "primary-container": "#3e2723",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeee9",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f4ef",
+                        "primary": "#271310",
+                        "surface": "#fafaf5",
+                        "tertiary-fixed": "#ece0dc",
+                        "on-surface": "#1a1c19",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e3e3de",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fafaf5",
+                        "tertiary": "#1d1815",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#201a18",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-container": "#fadcd2",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed-dim": "#cfc4c0",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-secondary-fixed": "#271812",
+                        "surface-tint": "#745853",
+                        "outline-variant": "#d3c3c0",
+                        "surface-dim": "#dadad5",
+                        "secondary-fixed": "#fadcd2",
+                        "outline": "#827472",
+                        "secondary": "#6f5a52",
+                        "tertiary-container": "#322c29",
+                        "on-secondary-fixed-variant": "#56423b",
+                        "background": "#fafaf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-md": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-layer {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        .text-soft-shadow {
+            text-shadow: 0 2px 4px rgba(62, 39, 35, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl dark:bg-inverse-surface/60 border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] flex justify-between items-center px-margin-mobile py-4 md:px-margin-desktop">
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Academic Folio</h1>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-margin-mobile flex flex-col gap-12 overflow-hidden">
+<!-- Profile Bio Header -->
+<section class="flex flex-col gap-6" id="bio">
+<div class="relative w-full aspect-square rounded-xl overflow-hidden glass-layer group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A professional, editorial-style portrait of a sophisticated male scholar in his early 30s with a warm but serious expression. He is wearing a refined chocolate-brown knit sweater against a minimal cream-colored interior wall. The lighting is soft and natural, emphasizing a high-end academic aesthetic with a slight warm, cinematic film grain. The composition is clean and minimalist, following the project's premium beige and brown palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIuakYW9IjyG4BMXssfexIEfddFPZ-RuQg5U98Yxu4sFKiQL4BLn0siYPnp1Ve4_aa6c0zjbpkaJ1Plj3AYwtRju5hEGoxAQrOvCK42izA0aXB-S56k0O6p0WJtDjYUdB3nnUSAEuJQxC_u-pGuC-PKQop4sc18lzX7ZFpsM0qNx8PJ_LXifWQWiN9IHjb0KMDVfjIB7-lJMXcCgt-d5SOxLUOIEI30iufwgqHmSyd0V9gs0Yp34aZmcDYVtLyK99i78nINQNqU--p"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<div class="space-y-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Julian Vance</h2>
+<p class="font-label-md text-label-md text-secondary tracking-widest uppercase">Doctoral Candidate · Narrative Ethics</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-2">
+                    Bridging the intersection of classical literature and modern algorithmic governance. My research explores how computational frameworks inherit cultural biases through semantic evolution.
+                </p>
+</div>
+</section>
+<!-- Academic Values (Bento-style Glass Cards) -->
+<section class="space-y-6" id="values">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                Academic Values
+            </h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="glass-layer p-6 rounded-xl space-y-3 hover:bg-surface/80 transition-all">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="menu_book">menu_book</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Literary Rigor</h4>
+<p class="text-on-surface-variant text-body-md">Maintaining the highest standards of textual analysis and philological integrity in every digital archive created.</p>
+</div>
+<div class="glass-layer p-6 rounded-xl space-y-3 hover:bg-surface/80 transition-all">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="science">science</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Ethical Inquiry</h4>
+<p class="text-on-surface-variant text-body-md">Questioning the 'why' behind data structures to ensure humanities research remains human-centric.</p>
+</div>
+</div>
+</section>
+<!-- Skills Matrix (Horizontal Scroll with Depth) -->
+<section class="space-y-6" id="skills">
+<div class="flex justify-between items-end">
+<h3 class="font-headline-sm text-headline-sm text-primary">Skills Matrix</h3>
+<span class="font-label-md text-label-md text-on-surface-variant/60">Horizontal Scroll</span>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-6 -mx-margin-mobile px-margin-mobile no-scrollbar">
+<div class="min-w-[200px] glass-layer p-6 rounded-xl flex flex-col justify-between h-48 border-b-2 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary">01</p>
+<p class="font-label-md text-label-md text-secondary">Data Archeology</p>
+</div>
+</div>
+<div class="min-w-[200px] glass-layer p-6 rounded-xl flex flex-col justify-between h-48">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary">02</p>
+<p class="font-label-md text-label-md text-secondary">Ontology Design</p>
+</div>
+</div>
+<div class="min-w-[200px] glass-layer p-6 rounded-xl flex flex-col justify-between h-48">
+<span class="material-symbols-outlined text-primary" data-icon="translate">translate</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary">03</p>
+<p class="font-label-md text-label-md text-secondary">Semantic Analysis</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Section (Impactful Glass Container) -->
+<section class="relative py-12 px-8 rounded-xl overflow-hidden glass-layer text-center flex flex-col items-center justify-center gap-6" id="quote">
+
+<span class="material-symbols-outlined text-4xl text-primary-container opacity-20" data-icon="format_quote">format_quote</span>
+<p class="font-headline-sm text-headline-sm italic text-primary relative z-10 leading-snug">
+                "The archive is not merely a collection of the past, but a living architecture that dictates the possibilities of our collective future."
+            </p>
+<div class="h-px w-12 bg-outline-variant/30 relative z-10"></div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-secondary relative z-10">Julian Vance, 2024</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative bottom-0 w-full bg-surface dark:bg-inverse-surface border-t border-outline-variant/30 flex flex-col items-center py-12 px-margin-mobile gap-4">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Academic Folio</h2>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Journal Index</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Curriculum Vitae</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Institutional Repository</a>
+</nav>
+<p class="font-label-md text-label-md text-secondary text-center leading-relaxed">
+            © 2024 Julian Vance. All Rights Reserved.<br/>Produced with Academic Rigor.
+        </p>
+</footer>
+<!-- Bottom Navigation Bar (Mobile Destination Rule) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 glass-layer rounded-t-full px-6 py-4 flex justify-between items-center md:hidden">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[10px] uppercase font-medium">Overview</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[10px] uppercase font-medium">Pubs</span>
+</button>
+<!-- Active Tab: Profile (Overview fallback) -->
+<button class="flex flex-col items-center gap-1 text-primary scale-110">
+<div class="absolute -top-1 w-1 h-1 bg-primary rounded-full"></div>
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-[10px] uppercase font-bold">Profile</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="text-[10px] uppercase font-medium">Research</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="text-[10px] uppercase font-medium">Contact</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for skills scroll progress
+        const skillsContainer = document.querySelector('#skills .flex');
+        skillsContainer.addEventListener('scroll', () => {
+            const maxScroll = skillsContainer.scrollWidth - skillsContainer.clientWidth;
+            const percentage = (skillsContainer.scrollLeft / maxScroll) * 100;
+            // Interaction logic could go here if we had a progress bar
+        });
+
+        // Add subtle interaction to glass cards
+        document.querySelectorAll('.glass-layer').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Folio | Student Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e3e3de",
+                    "inverse-surface": "#2f312e",
+                    "on-surface-variant": "#504442",
+                    "inverse-on-surface": "#f1f1ec",
+                    "on-primary-container": "#ae8d87",
+                    "on-secondary-container": "#766057",
+                    "on-tertiary-container": "#9c938f",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#ddc1b7",
+                    "on-tertiary-fixed-variant": "#4c4542",
+                    "primary-fixed-dim": "#e3beb8",
+                    "surface-container-high": "#e8e8e3",
+                    "on-background": "#1a1c19",
+                    "on-primary-fixed": "#2b1613",
+                    "primary-container": "#3e2723",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eeeee9",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f4f4ef",
+                    "primary": "#271310",
+                    "surface": "#fafaf5",
+                    "tertiary-fixed": "#ece0dc",
+                    "on-surface": "#1a1c19",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e3e3de",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fafaf5",
+                    "tertiary": "#1d1815",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#201a18",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffdad4",
+                    "secondary-container": "#fadcd2",
+                    "inverse-primary": "#e3beb8",
+                    "tertiary-fixed-dim": "#cfc4c0",
+                    "on-primary-fixed-variant": "#5b403c",
+                    "on-secondary-fixed": "#271812",
+                    "surface-tint": "#745853",
+                    "outline-variant": "#d3c3c0",
+                    "surface-dim": "#dadad5",
+                    "secondary-fixed": "#fadcd2",
+                    "outline": "#827472",
+                    "secondary": "#6f5a52",
+                    "tertiary-container": "#322c29",
+                    "on-secondary-fixed-variant": "#56423b",
+                    "background": "#fafaf5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "body-md": ["DM Sans"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "label-md": ["DM Sans"],
+                    "body-lg": ["DM Sans"],
+                    "headline-sm": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-lg-mobile": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #271310 0%, #6f5a52 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] flex justify-between items-center px-margin-desktop py-4">
+<div class="font-headline-md text-headline-md text-primary">Academic Folio</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md text-primary font-bold transition-colors" href="#">Overview</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Publications</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Research</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-primary/5 p-2 rounded-full transition-colors" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-primary/5 p-2 rounded-full transition-colors" data-icon="settings">settings</span>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low/60 backdrop-blur-3xl border-r border-on-surface-variant/10 shadow-xl hidden md:flex flex-col p-6 gap-unit pt-28">
+<div class="flex flex-col items-center mb-10 text-center">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="A sophisticated professional portrait of a female student with a warm smile, wearing minimalist academic attire. The lighting is soft and editorial, with a clean cream-colored background reflecting the luxury glassmorphism style of the portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcfD4Hw9BVyVzAo2e8-dUihsYr7jrue5hZGhdcNAD0r4eQZtJOkU-mt4fNaUa0Idf9sOmkexTDDgzBF92CskL4TqhdDsAzQ-vPR6eIEMi1wN1RkcH_jcBFM3EVtHJp98R0iVzLkafhFc1TXPs8DYSUCJrLyfe3M6_-2zrwR3hHXc8jH8MyKosqU719-UVqys-8PeJqsJnSwixvmcZ1OYpjsMuGeUe6AgSHhpNIYe-hFWYOxK4lBa70WG2o-q9QepYPUjp8PP8VZBKP"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Chi</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Doctoral Candidate</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="bg-primary text-on-primary rounded-xl flex items-center gap-4 px-4 py-3 scale-95 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-body-md text-body-md">Overview</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary flex items-center gap-4 px-4 py-3 transition-all hover:backdrop-blur-md" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-body-md text-body-md">Publications</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary flex items-center gap-4 px-4 py-3 transition-all hover:backdrop-blur-md" href="#">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="font-body-md text-body-md">Research</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary flex items-center gap-4 px-4 py-3 transition-all hover:backdrop-blur-md" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-body-md text-body-md">Archives</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary flex items-center gap-4 px-4 py-3 transition-all hover:backdrop-blur-md" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-body-md text-body-md">Contact</span>
+</a>
+</nav>
+</aside>
+<main class="md:ml-64 pt-32 pb-20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-display-lg text-display-lg text-primary mb-4 text-gradient">Welcome back, Chi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Your academic journey continues. You have 3 new peer reviews pending and 2 modules nearing completion.</p>
+</header>
+<!-- Top Row: Profile & Mastery -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16">
+<!-- Profile Card -->
+<div class="lg:col-span-8 glass-panel rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-[0_30px_60px_rgba(62,39,35,0.04)]">
+<div class="w-48 h-48 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close-up artistic portrait of a female university student in a bright, minimalist studio setting. The lighting is soft and golden, highlighting professional poise. The background is a subtle beige texture that matches the luxury editorial design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwUAv-0nvGIgyepqvybyq6f_dCIGOR0z1k0lbn0OP47P6jFdjYKiEzeXzQMJYtoze8M57tMYv2mK9kzmh3L_xSHRHfoGRRjJghUY0-fztwMi8msj0RORQxejuIoZJdgpC048d8GVrr1wX-8DT7w6EpPIRRRP4XwbWfJ01V3Xa8a_JfENO_3yuMECai5tO4e4-Uf-lID5Dx1QHaOMnJDxjajJxeVKCYUgeiywJHAuPdPMTcitq1fd2oAP8ghCx6KGCw2kSoUzRCM0OX"/>
+</div>
+<div class="flex-grow">
+<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md rounded-[2px] mb-4">ULIS-VNU STUDENT</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Chi Nguyen</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic mb-6">Specializing in Linguistics and Intercultural Communication</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">View Profile</button>
+<button class="border border-primary text-primary font-label-md text-label-md px-6 py-3 rounded-lg glass-panel hover:bg-primary/5 transition-colors">Download CV</button>
+</div>
+</div>
+</div>
+<!-- Mastery Level Card -->
+<div class="lg:col-span-4 glass-panel rounded-xl p-8 flex flex-col items-center justify-center text-center shadow-[0_30px_60px_rgba(62,39,35,0.04)]">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-6">Mastery Level</h3>
+<div class="relative w-40 h-40 mb-6">
+<svg class="w-full h-full" viewbox="0 0 100 100">
+<circle class="text-surface-variant" cx="50" cy="50" fill="transparent" r="42" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary progress-ring__circle" cx="50" cy="50" fill="transparent" r="42" stroke="currentColor" stroke-dasharray="263.89" stroke-dashoffset="21.11" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-headline-lg text-headline-lg text-primary">92%</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Across all core linguistic competency frameworks</p>
+</div>
+</div>
+<!-- Recent Achievement Banner -->
+<div class="glass-panel rounded-xl p-1 mb-16 overflow-hidden relative group cursor-pointer shadow-[0_30px_60px_rgba(62,39,35,0.02)]">
+<div class="flex flex-col md:flex-row items-center justify-between p-6 gap-6 relative z-10">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-widest">Recent Achievement</p>
+<h3 class="font-headline-sm text-headline-sm text-primary">Critical Analysis Excellence</h3>
+</div>
+</div>
+<div class="flex items-center gap-3 text-primary font-label-md text-label-md">
+<span>View Certificate</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-secondary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Explore Modules Section -->
+<section class="mb-16">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Explore Modules</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Navigate through your academic structure</p>
+</div>
+<a class="font-label-md text-label-md text-primary underline" href="#">Browse All Modules</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Assignments Card -->
+<div class="glass-panel rounded-xl p-8 group hover:translate-y-[-4px] transition-all duration-300 shadow-[0_30px_60px_rgba(62,39,35,0.04)]">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Assignments</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Track current tasks, submissions, and feedback cycles.</p>
+<div class="pt-6 border-t border-on-surface-variant/10 flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">12 Active</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Evidence Card -->
+<div class="glass-panel rounded-xl p-8 group hover:translate-y-[-4px] transition-all duration-300 shadow-[0_30px_60px_rgba(62,39,35,0.04)]">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Evidence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Curated collection of academic artifacts and proofs.</p>
+<div class="pt-6 border-t border-on-surface-variant/10 flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">48 Files</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Rubric Card -->
+<div class="glass-panel rounded-xl p-8 group hover:translate-y-[-4px] transition-all duration-300 shadow-[0_30px_60px_rgba(62,39,35,0.04)]">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="rule">rule</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Rubric</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Standards and assessment criteria for your specialization.</p>
+<div class="pt-6 border-t border-on-surface-variant/10 flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">9 Guidelines</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="md:ml-64 relative bottom-0 w-full bg-surface border-t border-outline-variant/30 flex flex-col items-center py-12 px-margin-desktop gap-4">
+<div class="font-headline-sm text-headline-sm text-on-surface">Academic Folio</div>
+<div class="flex gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Journal Index</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Curriculum Vitae</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Institutional Repository</a>
+</div>
+<p class="font-label-md text-label-md text-secondary opacity-80 mt-4">© 2024 Chi Nguyen. All Rights Reserved. Produced with Academic Rigor.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-panel border-t border-on-surface-variant/10 px-4 py-2 flex justify-around items-center z-50">
+<a class="flex flex-col items-center p-2 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-[10px] uppercase font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center p-2 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[10px] uppercase mt-1">Docs</span>
+</a>
+<a class="flex flex-col items-center p-2 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="text-[10px] uppercase mt-1">Lab</span>
+</a>
+<a class="flex flex-col items-center p-2 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] uppercase mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for hover effects and dynamic loading
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.glass-panel');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.borderColor = 'rgba(62, 39, 35, 0.2)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.borderColor = 'rgba(62, 39, 35, 0.1)';
+                });
+            });
+
+            // Smooth progress ring animation
+            const ring = document.querySelector('.progress-ring__circle');
+            if(ring) {
+                const radius = ring.r.baseVal.value;
+                const circumference = radius * 2 * Math.PI;
+                ring.style.strokeDasharray = `${circumference} ${circumference}`;
+                ring.style.strokeDashoffset = circumference;
+
+                setTimeout(() => {
+                    const offset = circumference - (92 / 100 * circumference);
+                    ring.style.strokeDashoffset = offset;
+                }, 300);
+            }
+        });
+    </script>
+</body></html>

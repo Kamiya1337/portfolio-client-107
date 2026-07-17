@@ -1,0 +1,92 @@
+{
+  ".codex/hooks.json": {
+    "mtime": 1781440542.3106432,
+    "ast_hash": "376ac8a7940675443cc9dd2d1b6b9f40",
+    "semantic_hash": "376ac8a7940675443cc9dd2d1b6b9f40"
+  },
+  "eslint.config.js": {
+    "mtime": 1781440542.3126469,
+    "ast_hash": "fa91453358b56681481f75f81d1bfccd",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1781440542.3226607,
+    "ast_hash": "d6fb3a234ec0fad25850ac4f680db6bc",
+    "semantic_hash": "d6fb3a234ec0fad25850ac4f680db6bc"
+  },
+  "postcss.config.js": {
+    "mtime": 1781440542.3226607,
+    "ast_hash": "5b84f4567208c7c747079c0477373231",
+    "semantic_hash": ""
+  },
+  "src/App.jsx": {
+    "mtime": 1781452105.8377657,
+    "ast_hash": "285e7ae8b7b6b18ac7d9aebb8e1285e3",
+    "semantic_hash": ""
+  },
+  "src/components/AssignmentCard.jsx": {
+    "mtime": 1783593774.875409,
+    "ast_hash": "f5d1f3cfc0a29b79487cb0f3fff23bc8",
+    "semantic_hash": ""
+  },
+  "src/components/AssignmentDetail.jsx": {
+    "mtime": 1783593776.4722924,
+    "ast_hash": "2622b39f962781b3a41d2463984d1b6c",
+    "semantic_hash": ""
+  },
+  "src/components/EvidenceTable.jsx": {
+    "mtime": 1783593778.1870499,
+    "ast_hash": "f89956217029cefc7739140b6d2b1c5f",
+    "semantic_hash": ""
+  },
+  "src/components/Hero.jsx": {
+    "mtime": 1782042583.8931484,
+    "ast_hash": "822bcbf07cca2fec1e3107ad83852938",
+    "semantic_hash": ""
+  },
+  "src/components/HomeTab.jsx": {
+    "mtime": 1782042118.6156242,
+    "ast_hash": "81deb649a4d1d35fac4830beb46b4d44",
+    "semantic_hash": ""
+  },
+  "src/components/ProjectsTab.jsx": {
+    "mtime": 1781452173.5258467,
+    "ast_hash": "4b2245ad6c514f9b50db513b87f9e8be",
+    "semantic_hash": ""
+  },
+  "src/components/RubricTable.jsx": {
+    "mtime": 1781452298.2166615,
+    "ast_hash": "3db5f69ffa558e2bec85401ffd57c696",
+    "semantic_hash": ""
+  },
+  "src/components/Sidebar.jsx": {
+    "mtime": 1782042370.0415516,
+    "ast_hash": "4ab0b5857753b06c2198d9b6e23c7705",
+    "semantic_hash": ""
+  },
+  "src/components/Summary.jsx": {
+    "mtime": 1782041659.9973097,
+    "ast_hash": "adccdc8abe751ef7e2c5cad9764a202c",
+    "semantic_hash": ""
+  },
+  "src/data/portfolioData.js": {
+    "mtime": 1783593780.3559976,
+    "ast_hash": "e0fecb3c4817bdd2cfba457b61c44a0c",
+    "semantic_hash": ""
+  },
+  "src/main.jsx": {
+    "mtime": 1781440542.4651973,
+    "ast_hash": "45c1e9c3c636a05a9d36e2dc1fe59957",
+    "semantic_hash": ""
+  },
+  "tailwind.config.js": {
+    "mtime": 1781453183.1674669,
+    "ast_hash": "44939e5674750c599ad84f1838da297d",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1781440542.4651973,
+    "ast_hash": "199e1221ae03d6974fdc8b5e23787b98",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e3e3de",
+                    "inverse-surface": "#2f312e",
+                    "on-surface-variant": "#504442",
+                    "inverse-on-surface": "#f1f1ec",
+                    "on-primary-container": "#ae8d87",
+                    "on-secondary-container": "#766057",
+                    "on-tertiary-container": "#9c938f",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#ddc1b7",
+                    "on-tertiary-fixed-variant": "#4c4542",
+                    "primary-fixed-dim": "#e3beb8",
+                    "surface-container-high": "#e8e8e3",
+                    "on-background": "#1a1c19",
+                    "on-primary-fixed": "#2b1613",
+                    "primary-container": "#3e2723",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eeeee9",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f4f4ef",
+                    "primary": "#271310",
+                    "surface": "#fafaf5",
+                    "tertiary-fixed": "#ece0dc",
+                    "on-surface": "#1a1c19",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e3e3de",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fafaf5",
+                    "tertiary": "#1d1815",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#201a18",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffdad4",
+                    "secondary-container": "#fadcd2",
+                    "inverse-primary": "#e3beb8",
+                    "tertiary-fixed-dim": "#cfc4c0",
+                    "on-primary-fixed-variant": "#5b403c",
+                    "on-secondary-fixed": "#271812",
+                    "surface-tint": "#745853",
+                    "outline-variant": "#d3c3c0",
+                    "surface-dim": "#dadad5",
+                    "secondary-fixed": "#fadcd2",
+                    "outline": "#827472",
+                    "secondary": "#6f5a52",
+                    "tertiary-container": "#322c29",
+                    "on-secondary-fixed-variant": "#56423b",
+                    "background": "#fafaf5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "body-md": ["DM Sans"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "label-md": ["DM Sans"],
+                    "body-lg": ["DM Sans"],
+                    "headline-sm": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-lg-mobile": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fafaf5;
+            color: #1a1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .active-nav-item {
+            color: #271310;
+            font-weight: 700;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] px-margin-mobile py-4 flex justify-between items-center">
+<h1 class="font-headline-md text-headline-md text-primary">Academic Folio</h1>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="mt-24 px-margin-mobile">
+<!-- Header Section -->
+<section class="mb-8">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Assignments</h2>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Track your current research milestones and academic deliverables.</p>
+</section>
+<!-- Vertical List of Assignment Cards -->
+<div class="space-y-6">
+<!-- Card 1: Active -->
+<div class="glass-panel rounded-xl p-6 shadow-[0_30px_60px_rgba(62,39,35,0.04)] transition-all duration-300 active:scale-[0.98]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/5 text-primary font-label-md text-label-md px-3 py-1 rounded-full uppercase tracking-widest">In Progress</span>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="more_vert">more_vert</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 leading-tight">Advanced Qualitative Methods: Ethnographic Analysis</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-sm text-on-surface-variant" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Due Oct 24, 2024</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface overflow-hidden bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A portrait of a distinguished academic professor in a sunlit library, wearing a soft brown tweed blazer. The aesthetic is warm, minimalist, and editorial, featuring soft shadows and a professional, calm atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyKgEiMCiSfGwDSzGZoDDf7xoImNEkf4B-6WP3O5v84tynuWljVapewN5CBcCLm9bDxfeSb3b6gMrWXuAjs4xoEzXvWvyy2UyqjWbxKBeWeAspCFOtfpQyo6kxun2KidhVu9FEZLAreJDA24Q-jmY7W6YftBD87b3REOcCWJAhHdUEtNArvpzYBhEVih_fi_KTe-u1VZgLmDYwqj4d9AYfVdeGNAknhixG7sZGoAX0O70Sdwp2BKnAjmsHqwqfBDJKk17jplbAhRvd"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface overflow-hidden bg-primary flex items-center justify-center text-[10px] text-white font-bold">
+                            +2
+                        </div>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg transition-colors hover:bg-primary/90">View Brief</button>
+</div>
+</div>
+<!-- Card 2: Upcoming -->
+<div class="glass-panel rounded-xl p-6 shadow-[0_30px_60px_rgba(62,39,35,0.04)] transition-all duration-300 opacity-90">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-3 py-1 rounded-full uppercase tracking-widest">Pending</span>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="lock">lock</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 leading-tight">Comparative Literature: The Neo-Modernist Shift</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-sm text-on-surface-variant" data-icon="event">event</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Due Nov 12, 2024</span>
+</div>
+<div class="w-full bg-surface-variant/30 h-[1px] mb-6"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant/60 italic">Waiting for peer review</span>
+<button class="border border-primary/20 text-primary font-label-md text-label-md px-6 py-2 rounded-lg backdrop-blur-sm transition-all hover:bg-primary/5">Details</button>
+</div>
+</div>
+<!-- Card 3: Late -->
+<div class="glass-panel rounded-xl p-6 shadow-[0_30px_60px_rgba(62,39,35,0.04)] transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-error/10 text-error font-label-md text-label-md px-3 py-1 rounded-full uppercase tracking-widest">Urgent</span>
+<span class="material-symbols-outlined text-error" data-icon="error">error</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 leading-tight">Dissertation Draft: Chapter 4 Methodology</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-sm text-error" data-icon="schedule">schedule</span>
+<span class="font-label-md text-label-md text-error font-bold">Overdue 2 Days</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="attach_file">attach_file</span>
+<span class="font-label-md text-label-md text-on-surface-variant">2 files attached</span>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg shadow-lg">Submit Now</button>
+</div>
+</div>
+<!-- Card 4: Reference Card with Image -->
+<div class="glass-panel rounded-xl overflow-hidden shadow-[0_30px_60px_rgba(62,39,35,0.04)]">
+<div class="h-32 relative">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-end architectural shot of a modern, minimalist university building with glass facades reflecting a soft beige sunset. The lighting is diffused and ethereal, capturing the essence of quiet academic luxury and contemporary design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHwHS6IS41QI6aE1I67h-y9NlpufNcEbD7JJcLljEIuiOwhPu3yIvDRy3nabHX1gFKpc56PhkFLJIHuzS44ukgEeQTxXtcAFAjRBjqcGXqRKkwzI2xmDY9dufsFMlQYHLbDWf6qI-ODr6Q14JryYduyTpAmADPUvwzOPrZvHv1PE1_G6kyEP9U8dd5-SrpfJ00eMPg20HvEEEDvr1lnbHY4QQtNQunVjG7AjWeTxt5mj9iNaqa1mhElpV03yXN9g-knJU675pgGXe2')"></div>
+<div class="absolute bottom-4 left-6 z-20">
+<span class="font-label-md text-label-md text-white/90 uppercase tracking-widest">Archival Project</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Digital Humanities &amp; The Global Archive</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Exploration of decentralized storage models for cultural heritage artifacts.</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md text-primary">Research Approved</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 right-0 h-20 bg-surface/60 backdrop-blur-3xl border-t border-on-surface-variant/10 flex justify-around items-center px-6 z-50 md:hidden">
+<div class="flex flex-col items-center gap-1 text-on-surface-variant/60">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-label-md text-[10px]">Overview</span>
+</div>
+<div class="flex flex-col items-center gap-1 active-nav-item">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label-md text-[10px]">Publications</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant/60">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="font-label-md text-[10px]">Research</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant/60">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-md text-[10px]">Archives</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant/60">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-md text-[10px]">Contact</span>
+</div>
+</nav>
+<!-- Contextual FAB (Only for main screens) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center transition-transform active:scale-90 z-40">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+<footer class="mt-12 py-12 px-margin-mobile flex flex-col items-center gap-4 bg-surface-container-low/30 border-t border-outline-variant/30">
+<p class="font-headline-sm text-headline-sm text-on-surface opacity-80">Academic Folio</p>
+<p class="font-label-md text-label-md text-on-surface-variant text-center max-w-[280px]">
+            © 2024 Julian Vance. Produced with Academic Rigor.
+        </p>
+<div class="flex gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant underline" href="#">CV</a>
+<a class="font-label-md text-label-md text-on-surface-variant underline" href="#">Index</a>
+</div>
+</footer>
+<script>
+        // Micro-interactions for glass cards
+        document.querySelectorAll('.glass-panel').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.backgroundColor = 'rgba(245, 245, 240, 0.8)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+                card.style.backgroundColor = 'rgba(245, 245, 240, 0.6)';
+            });
+        });
+
+        // Simple scroll shadow logic for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.style.backgroundColor = 'rgba(250, 250, 245, 0.95)';
+            } else {
+                header.classList.remove('shadow-md');
+                header.style.backgroundColor = 'rgba(250, 250, 245, 0.6)';
+            }
+        });
+    </script>
+</body></html>

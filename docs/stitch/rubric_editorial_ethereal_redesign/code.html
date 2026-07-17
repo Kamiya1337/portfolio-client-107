@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Assessment Matrix | Academic Folio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        .progress-bar-fill {
+            transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e3e3de",
+                        "inverse-surface": "#2f312e",
+                        "on-surface-variant": "#504442",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-primary-container": "#ae8d87",
+                        "on-secondary-container": "#766057",
+                        "on-tertiary-container": "#9c938f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ddc1b7",
+                        "on-tertiary-fixed-variant": "#4c4542",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-container-high": "#e8e8e3",
+                        "on-background": "#1a1c19",
+                        "on-primary-fixed": "#2b1613",
+                        "primary-container": "#3e2723",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeee9",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f4ef",
+                        "primary": "#271310",
+                        "surface": "#fafaf5",
+                        "tertiary-fixed": "#ece0dc",
+                        "on-surface": "#1a1c19",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e3e3de",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fafaf5",
+                        "tertiary": "#1d1815",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#201a18",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-container": "#fadcd2",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed-dim": "#cfc4c0",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-secondary-fixed": "#271812",
+                        "surface-tint": "#745853",
+                        "outline-variant": "#d3c3c0",
+                        "surface-dim": "#dadad5",
+                        "secondary-fixed": "#fadcd2",
+                        "outline": "#827472",
+                        "secondary": "#6f5a52",
+                        "tertiary-container": "#322c29",
+                        "on-secondary-fixed-variant": "#56423b",
+                        "background": "#fafaf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-md": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl dark:bg-inverse-surface/60 border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] duration-300 ease-out flex justify-between items-center px-margin-desktop py-4">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Academic Folio</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:bg-primary/5 transition-colors px-4 py-2 rounded font-label-md text-label-md" href="#">Overview</a>
+<a class="text-primary font-bold hover:bg-primary/5 transition-colors px-4 py-2 rounded font-label-md text-label-md" href="#">Assessment Matrix</a>
+<a class="text-on-surface-variant hover:bg-primary/5 transition-colors px-4 py-2 rounded font-label-md text-label-md" href="#">Curriculum</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="settings">settings</span>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-20 text-center md:text-left">
+<div class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-sm text-label-md font-label-md mb-6 tracking-widest">FINAL REVIEW</div>
+<h1 class="font-display-lg text-display-lg text-primary mb-4 leading-tight">Assessment Matrix</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A comprehensive evaluation of doctoral progress, synthesizing theoretical frameworks with practical artistic execution.</p>
+</header>
+<!-- Score & Main Bento -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Overall Score Card -->
+<div class="md:col-span-4 glass-panel p-10 rounded-xl relative overflow-hidden flex flex-col items-center justify-center text-center h-full min-h-[400px]">
+<div class="relative z-10">
+<span class="font-label-md text-label-md text-secondary tracking-widest block mb-4">READINESS SCORE</span>
+<div class="relative inline-flex items-center justify-center">
+<svg class="w-48 h-48 transform -rotate-90">
+<circle class="text-outline-variant/30" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="2"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.92" stroke-dashoffset="0" stroke-width="4"></circle>
+</svg>
+<span class="absolute font-display-lg text-display-lg text-primary">100%</span>
+</div>
+<p class="mt-8 font-headline-sm text-headline-sm text-primary">Exceptional Standing</p>
+<p class="mt-2 text-on-surface-variant text-body-md italic">Prepared for final defense with honors.</p>
+</div>
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+
+</div>
+</div>
+<!-- Detailed Metrics Grid -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<!-- Conceptual Rigor -->
+<div class="glass-panel p-8 rounded-xl hover:shadow-xl transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="psychology">psychology</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">OPTIMAL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Conceptual Rigor</h3>
+<p class="text-on-surface-variant text-body-md mb-8">Deep integration of historical precedents with contemporary theoretical frameworks. Demonstrates nuanced critical analysis.</p>
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-primary h-full w-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Visual Poetics -->
+<div class="glass-panel p-8 rounded-xl hover:shadow-xl transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">MASTERY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Visual Poetics</h3>
+<p class="text-on-surface-variant text-body-md mb-8">Aesthetic cohesion across all media. Exceptional use of lighting, composition, and metaphorical visual storytelling.</p>
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-primary h-full w-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Digital Literacy -->
+<div class="glass-panel p-8 rounded-xl hover:shadow-xl transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="terminal">terminal</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">ADVANCED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Digital Literacy</h3>
+<p class="text-on-surface-variant text-body-md mb-8">Fluency in generative systems and custom shader development. High technical proficiency in emerging art tech.</p>
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-primary h-full w-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Reflective Depth -->
+<div class="glass-panel p-8 rounded-xl hover:shadow-xl transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="history_edu">history_edu</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">PROFOUND</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Reflective Depth</h3>
+<p class="text-on-surface-variant text-body-md mb-8">Self-aware praxis documented through consistent pedagogical journaling and iterative design reflections.</p>
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-primary h-full w-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Qualitative Synthesis -->
+<section class="mt-24">
+<div class="border-t border-outline-variant/30 pt-16 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h2 class="font-headline-md text-headline-md text-primary leading-tight mb-6">Qualitative<br/>Synthesis</h2>
+</div>
+<div class="md:col-span-8">
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<span class="font-display-lg text-headline-md text-outline-variant/40 group-hover:text-primary transition-colors">01</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">Interdisciplinary Convergence</h4>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">The candidate has successfully bridged the gap between computational logic and classical art history. The resulting portfolio demonstrates a "Third Space" of digital expressionism that is both technically robust and emotionally resonant.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<span class="font-display-lg text-headline-md text-outline-variant/40 group-hover:text-primary transition-colors">02</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">Global Contextualization</h4>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">Engagement with diverse cultural semiotics allows the work to transcend local academic boundaries, positioning the research at the forefront of international media studies dialogue.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Section -->
+<section class="mt-32 pt-16 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-md">
+<h5 class="font-label-md text-label-md text-secondary mb-2 tracking-widest uppercase">OFFICIAL ENDORSEMENT</h5>
+<p class="text-body-md text-on-surface-variant">This assessment matrix serves as a formal record of doctoral excellence and readiness for final dissertation submission.</p>
+</div>
+<div class="text-right">
+<div class="mb-2 italic font-headline-md text-headline-md text-primary opacity-90 signature-reveal">Lương Ngọc Kim Chi</div>
+<div class="h-px w-64 bg-primary mb-4 ml-auto"></div>
+<p class="font-label-md text-label-md text-primary font-bold">Lương Ngọc Kim Chi</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Head of Doctoral Committee</p>
+<p class="font-label-md text-label-md text-on-surface-variant/60 mt-1">Dated: June 14, 2024</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative bottom-0 w-full bg-surface dark:bg-inverse-surface border-t border-outline-variant/30 flat no shadows flex flex-col items-center py-12 px-margin-desktop gap-4 opacity-80 hover:opacity-100 transition-all">
+<div class="font-headline-sm text-headline-sm text-on-surface">Academic Folio</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Journal Index</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Curriculum Vitae</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Institutional Repository</a>
+</div>
+<p class="font-label-md text-label-md text-secondary dark:text-secondary-fixed text-center max-w-lg mt-4">
+            © 2024 Julian Vance. All Rights Reserved. Produced with Academic Rigor.
+        </p>
+</footer>
+<script>
+        // Simple scroll reveal for the signature and bars
+        document.addEventListener('DOMContentLoaded', () => {
+            const fills = document.querySelectorAll('.progress-bar-fill');
+            fills.forEach(fill => {
+                const targetWidth = fill.style.width;
+                fill.style.width = '0';
+                setTimeout(() => {
+                    fill.style.width = targetWidth;
+                }, 400);
+            });
+
+            // Micro-interaction for hover states on glass panels
+            const panels = document.querySelectorAll('.glass-panel');
+            panels.forEach(panel => {
+                panel.addEventListener('mouseenter', () => {
+                    panel.style.transform = 'translateY(-4px)';
+                });
+                panel.addEventListener('mouseleave', () => {
+                    panel.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Synthesis &amp; Critical Growth | Academic Folio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e3e3de",
+                        "inverse-surface": "#2f312e",
+                        "on-surface-variant": "#504442",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-primary-container": "#ae8d87",
+                        "on-secondary-container": "#766057",
+                        "on-tertiary-container": "#9c938f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ddc1b7",
+                        "on-tertiary-fixed-variant": "#4c4542",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-container-high": "#e8e8e3",
+                        "on-background": "#1a1c19",
+                        "on-primary-fixed": "#2b1613",
+                        "primary-container": "#3e2723",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeee9",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f4ef",
+                        "primary": "#271310",
+                        "surface": "#fafaf5",
+                        "tertiary-fixed": "#ece0dc",
+                        "on-surface": "#1a1c19",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e3e3de",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fafaf5",
+                        "tertiary": "#1d1815",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#201a18",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-container": "#fadcd2",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed-dim": "#cfc4c0",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-secondary-fixed": "#271812",
+                        "surface-tint": "#745853",
+                        "outline-variant": "#d3c3c0",
+                        "surface-dim": "#dadad5",
+                        "secondary-fixed": "#fadcd2",
+                        "outline": "#827472",
+                        "secondary": "#6f5a52",
+                        "tertiary-container": "#322c29",
+                        "on-secondary-fixed-variant": "#56423b",
+                        "background": "#fafaf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-md": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .ethereal-glass {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glass-shadow {
+            text-shadow: 0 4px 12px rgba(62, 39, 35, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] flex justify-between items-center px-margin-desktop py-4">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Academic Folio</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-on-surface-variant hover:bg-primary/5 transition-colors px-3 py-1 rounded-sm" href="#">Overview</a>
+<a class="text-on-surface-variant hover:bg-primary/5 transition-colors px-3 py-1 rounded-sm" href="#">Publications</a>
+<a class="text-primary font-bold px-3 py-1 rounded-sm" href="#">Research</a>
+<a class="text-on-surface-variant hover:bg-primary/5 transition-colors px-3 py-1 rounded-sm" href="#">Archives</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer p-2 rounded-full hover:bg-primary/5 transition-all">account_circle</span>
+<span class="material-symbols-outlined text-primary cursor-pointer p-2 rounded-full hover:bg-primary/5 transition-all">settings</span>
+</div>
+</nav>
+<!-- Sidebar (Large Screens Only) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low/60 backdrop-blur-3xl border-r border-on-surface-variant/10 shadow-xl flex flex-col p-6 gap-unit hidden xl:flex z-40 pt-24">
+<div class="mb-8">
+<div class="w-16 h-16 bg-primary-container rounded-full mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-90" data-alt="A dignified editorial portrait of a young Vietnamese academic professional, Alex Nguyen, with soft lighting and a warm beige studio background. The style is minimalist and high-end, reflecting an atmosphere of intellectual rigor and sophisticated minimalist luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuFocfD13xFQtbhDPDK0TavQA3I-hgr7BTbb_Ut6f9gTKBZ0bUcWQW7VbGsfseHc0c_xbZ7kwkx6C-_3w08k5_fRGEtbM15Qkk1m_P01fhwWxCyHKQoPWlJ3dy5Jdyl0UCUMsJMEb4JLYnzQ8OVm8zkqkN1r-X_4HiAKzUJztP8wGF9Ie8iR3JE9h2KaUjXGsgHZvFcK2qw-37UY0Bys_2rXdIxdYjeBaNVS0CLCUDIFPLf02SWhjwxrG5JW8ypeVMFk3SjcdZH3vk"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Julian Vance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">Doctoral Candidate</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary hover:backdrop-blur-md transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Publications</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-primary text-on-primary rounded-xl transition-all scale-95 active:scale-90 shadow-md" href="#">
+<span class="material-symbols-outlined">science</span>
+<span class="font-label-md text-label-md">Research</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Archives</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="xl:ml-64 pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-screen-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-20">
+<div class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-1 rounded-[2px] font-label-md text-label-md uppercase tracking-widest mb-6">Annual Review</div>
+<h1 class="font-display-lg text-display-lg md:text-[80px] text-primary mb-8 max-w-4xl leading-tight">
+                Synthesis &amp; <br/><span class="italic font-serif">Critical Growth</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                A structured reflection on the evolution of cognitive frameworks, empirical methodologies, and the expansion of cross-disciplinary influence during the 2023-2024 academic cycle.
+            </p>
+</header>
+<!-- Bento Grid: Cognitive Evolution & Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24">
+<!-- Cognitive Evolution (Large Card) -->
+<section class="md:col-span-8 ethereal-glass rounded-xl p-12 shadow-[0_30px_60px_rgba(62,39,35,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase tracking-wide">Cognitive Evolution</h2>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="font-headline-sm text-[20px] text-primary mb-2">Shift from Linear to Systems Thinking</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed"> Transitioned toward a holistic analysis of interconnected data nodes, moving beyond isolated variable testing to understand complex academic ecosystems. This evolution has redefined the parameters of my current longitudinal study.</p>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] text-primary mb-2">Refinement of Critical Dialectics</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Enhanced the ability to synthesize opposing theoretical frameworks into cohesive functional models, reducing analytical friction in collaborative research environments.</p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">Framework Version 4.2.0</span>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-[2px] font-label-md text-label-md hover:opacity-90 transition-opacity">Read Full Journal</button>
+</div>
+</section>
+<!-- Growth Metrics (Side Stats) -->
+<section class="md:col-span-4 flex flex-col gap-gutter">
+<div class="ethereal-glass rounded-xl p-8 flex-1 border-l-4 border-l-primary">
+<span class="font-label-md text-label-md text-on-surface-variant block mb-4 uppercase">Publication Reach</span>
+<div class="font-headline-lg text-headline-lg text-primary mb-1">24.8%</div>
+<p class="font-body-md text-on-surface-variant">Citation index increase YoY</p>
+</div>
+<div class="ethereal-glass rounded-xl p-8 flex-1 border-l-4 border-l-secondary">
+<span class="font-label-md text-label-md text-on-surface-variant block mb-4 uppercase">Network Nodes</span>
+<div class="font-headline-lg text-headline-lg text-primary mb-1">12</div>
+<p class="font-body-md text-on-surface-variant">New international institutional partners</p>
+</div>
+<div class="relative overflow-hidden rounded-xl h-48">
+<img class="w-full h-full object-cover brightness-110" data-alt="A macro photograph of an abstract glass sculpture with light refracting through its edges, creating soft spectrums of color. The background is a warm beige cream, and the lighting is soft and ambient. The aesthetic is clean, academic, and minimalist luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL8FIFpfisDywMw-7_HyPUkubzeWmoE7fkrKFwQ3Nurb4fx28eKefAuHN2s3bh3Ku2utrhPWy-e--LJIb92_8uAbkY9kFm-Ao3fSLdXlTNxVbOUdifjueaZ_HQ9fWdY0u99_lsocmZIsnnILwupYve2O61I07qxrMOHJugtvIlIC6IRJSSCgy8n9HD10t4N4x4Ex5gWckqRz3c75CD5caOJ0vHdiRMHsyxEPKTtHrVcwZAwAeiDzyOKJjhO1jzE1aF9Es_D-mWphqp"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] flex items-center justify-center">
+<span class="text-on-primary font-headline-sm text-headline-sm italic">Growth Metrics</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Cross-Disciplinary Impact -->
+<section class="mb-24">
+<div class="flex items-baseline gap-6 mb-12 border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-md text-headline-md text-primary">Cross-Disciplinary Impact</h2>
+<span class="font-body-md text-on-surface-variant opacity-60">Inter-departmental Knowledge Transfer</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-4">
+<div class="w-full aspect-square bg-surface-container-highest overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist layout of architectural blueprints layered with botanical illustrations. The color palette is warm sand, chocolate brown, and ivory. High-end editorial lighting with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzWhmP14u9SeTQC3PjGgaotQwHrIxkxqcwyaO5sq1uuCl5iDVfG5ogiSAJMSChZzbjhnXhNq4pdtm__id5bVxx5BKo0btsZhE0NlhgyUw9aYubK2yHhyRPTUEGNx9kQnsSU35lqNfvVdp_P15fgK4ccK-9ddIPjVKWxn9g0JzsY2BeZ9qLKpFTBKsGPWTGUFCgsKlyDsktirclMQdBsFcrDVZWK_hfq-u-_2rNCtM1urO7NwydAOdiQkmg6q-pIOlrrwCjeEnsm84P"/>
+</div>
+<h4 class="font-headline-sm text-[20px] text-primary">Design &amp; Social Science</h4>
+<p class="font-body-md text-on-surface-variant">Utilizing ethnographic methods to inform human-centric UI/UX paradigms in academic repositories.</p>
+</div>
+<div class="space-y-4">
+<div class="w-full aspect-square bg-surface-container-highest overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Abstract representation of data visualization merging into a classical oil painting landscape. Beige, deep browns, and subtle ochre tones. The mood is sophisticated and academic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7xrsq88aOltro73Qv1nAKqZxGSiD__DHs54OVt2oxKLgxzXiGH6fe6fha6bVdCF7GIUaxFlHhjp-9WayYU4gZOg_OuZ5Axz8FkowWOYp9l-B4g90Ckm2qJBMhLcRJrhrSr1a5G-MOketo5NKgvzgNR9hpG-tdXAQeEeuW05fp5IZUYPt2k_sPqPHHr9KZRXoKGp6WoZLzTc6z8XjOV0xyLmdHmHcdJabwtt4nweZ3arX5TX-EGgtbs3OepTVhciwI2_QIns6xXGbN"/>
+</div>
+<h4 class="font-headline-sm text-[20px] text-primary">Ethics in AI</h4>
+<p class="font-body-md text-on-surface-variant">Applying classical philosophy to contemporary algorithmic bias and generative modeling.</p>
+</div>
+<div class="space-y-4">
+<div class="w-full aspect-square bg-surface-container-highest overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Macro view of crystalline structures in a laboratory setting. Soft focus, ethereal lighting, minimalist beige and gold palette. High-end professional photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWGb_6E-vwsRwEl_KW1BCOEkPW9PfZHdbfcCWXTZMpkTRr1wnOtDIFRs0kwhMyY551wO9UxpeZoo0LxyUN24iDZUn7rlRjQcdGqFKhpMl7wdt10ZMYj_oj-775pCf42gvAU9QaHBzqotd0wLwiA54kqqZynLUACxEU19bSV0R9pvKt8QS5m6xd64x79kq9Vl0bTBdc7220UrKzIxblnJBf2qTWjGUEkYbgQ-ao97pfLDQG5vkcbKrD7_mWUankCwjmM-UOLulHZ_MY"/>
+</div>
+<h4 class="font-headline-sm text-[20px] text-primary">Sustainable Systems</h4>
+<p class="font-body-md text-on-surface-variant">Analyzing the ecological footprint of large-scale computational research frameworks.</p>
+</div>
+</div>
+</section>
+<!-- Academic Integrity Pledge -->
+<section class="mb-24 py-20 px-8 md:px-16 ethereal-glass rounded-xl text-center relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-4 italic">Academic Integrity Pledge</h2>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-10">Cam kết Liêm chính Học thuật</h3>
+<div class="grid md:grid-cols-2 gap-12 text-left mb-16">
+<div class="space-y-4">
+<p class="font-body-md text-on-surface-variant italic border-l-2 border-primary pl-6 py-2">
+                            "Tôi cam kết duy trì các tiêu chuẩn cao nhất về sự trung thực, minh bạch và đạo đức trong mọi nỗ lực nghiên cứu và học thuật. Mọi ý tưởng và công trình trình bày tại đây đều là thành quả của quá trình tư duy độc lập và sự cộng tác trung thực."
+                        </p>
+</div>
+<div class="space-y-4">
+<p class="font-body-md text-on-surface-variant border-l-2 border-secondary pl-6 py-2">
+                            "I pledge to uphold the highest standards of honesty, transparency, and ethics in all research and scholarly pursuits. Every idea and work presented here is the result of rigorous independent thought and honest collaboration."
+                        </p>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="font-headline-md text-headline-md text-primary italic mb-2 select-none">Alex Nguyen</div>
+<div class="w-48 h-[1px] bg-primary/30 mb-4"></div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-[0.2em]">Validated Electronic Signature</p>
+<p class="font-label-md text-[10px] text-on-surface-variant/50 mt-1">Hash ID: 88AF-99BC-0102-ED42</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative bottom-0 w-full bg-surface border-t border-outline-variant/30 flex flex-col items-center py-12 px-margin-desktop gap-4">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-4">Julian Vance</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Journal Index</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Curriculum Vitae</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Institutional Repository</a>
+</div>
+<p class="font-label-md text-label-md text-secondary text-center opacity-80 hover:opacity-100 transition-opacity">
+            © 2024 Julian Vance. All Rights Reserved. Produced with Academic Rigor.
+        </p>
+</footer>
+<!-- Interactive script for glass card subtle parallax -->
+<script>
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.ethereal-glass');
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            
+            cards.forEach(card => {
+                card.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body></html>

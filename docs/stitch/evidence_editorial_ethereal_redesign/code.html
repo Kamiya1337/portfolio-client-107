@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Milestone Ledger | Julian Vance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e3e3de",
+                      "inverse-surface": "#2f312e",
+                      "on-surface-variant": "#504442",
+                      "inverse-on-surface": "#f1f1ec",
+                      "on-primary-container": "#ae8d87",
+                      "on-secondary-container": "#766057",
+                      "on-tertiary-container": "#9c938f",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#ddc1b7",
+                      "on-tertiary-fixed-variant": "#4c4542",
+                      "primary-fixed-dim": "#e3beb8",
+                      "surface-container-high": "#e8e8e3",
+                      "on-background": "#1a1c19",
+                      "on-primary-fixed": "#2b1613",
+                      "primary-container": "#3e2723",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#eeeee9",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f4f4ef",
+                      "primary": "#271310",
+                      "surface": "#fafaf5",
+                      "tertiary-fixed": "#ece0dc",
+                      "on-surface": "#1a1c19",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e3e3de",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#fafaf5",
+                      "tertiary": "#1d1815",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#201a18",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#ffdad4",
+                      "secondary-container": "#fadcd2",
+                      "inverse-primary": "#e3beb8",
+                      "tertiary-fixed-dim": "#cfc4c0",
+                      "on-primary-fixed-variant": "#5b403c",
+                      "on-secondary-fixed": "#271812",
+                      "surface-tint": "#745853",
+                      "outline-variant": "#d3c3c0",
+                      "surface-dim": "#dadad5",
+                      "secondary-fixed": "#fadcd2",
+                      "outline": "#827472",
+                      "secondary": "#6f5a52",
+                      "tertiary-container": "#322c29",
+                      "on-secondary-fixed-variant": "#56423b",
+                      "background": "#fafaf5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "gutter": "32px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Libre Caslon Text"],
+                      "body-md": ["DM Sans"],
+                      "display-lg": ["Libre Caslon Text"],
+                      "label-md": ["DM Sans"],
+                      "body-lg": ["DM Sans"],
+                      "headline-sm": ["Libre Caslon Text"],
+                      "headline-lg": ["Libre Caslon Text"],
+                      "headline-lg-mobile": ["Libre Caslon Text"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-container {
+            background: rgba(245, 245, 240, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(62, 39, 35, 0.1);
+        }
+        .ethereal-shadow {
+            box-shadow: 0 30px 60px rgba(62, 39, 35, 0.04);
+        }
+        .scrolling-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .scrolling-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .scrolling-content::-webkit-scrollbar-thumb {
+            background: rgba(62, 39, 35, 0.1);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl dark:bg-inverse-surface/60 border-b border-on-surface-variant/10 shadow-[0_30px_60px_rgba(62,39,35,0.04)] duration-300 ease-out flex justify-between items-center px-margin-desktop py-4">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Academic Folio</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline-sm text-headline-sm text-on-surface-variant hover:bg-primary/5 transition-colors px-3 py-1" href="#">Overview</a>
+<a class="font-headline-sm text-headline-sm text-primary font-bold px-3 py-1" href="#">Milestones</a>
+<a class="font-headline-sm text-headline-sm text-on-surface-variant hover:bg-primary/5 transition-colors px-3 py-1" href="#">Repository</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl cursor-pointer" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-primary text-2xl cursor-pointer" data-icon="settings">settings</span>
+</div>
+</nav>
+<!-- SideNavBar (Hidden on small screens) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-64 bg-surface-container-low/60 backdrop-blur-3xl border-r border-on-surface-variant/10 shadow-xl flex-col p-6 gap-unit z-40 pt-24">
+<div class="mb-8 px-2">
+<img class="w-16 h-16 rounded-full object-cover mb-3 border border-outline-variant/30" data-alt="A professional and dignified portrait of a doctoral candidate in their thirties, wearing a subtle charcoal sweater, set against a blurred background of a sophisticated academic library with warm oak shelving. The lighting is soft and cinematic, emphasizing a serious yet approachable scholarly persona within a minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbx7lCEEiZtNwecav3_coPR9Wu4U5_Hhfx67xqSHXsVZx7ux-0fUqVx3bblZcknH5lrxgu_S2o2kgD6JAtzk2R60kO_S5wFAMB_wDe8tYsU-MKYf7ApTzKvV6-MvPf9WEv8AvUrZNVIUnbLtDlFf6nJP_6oogfhedKzxaUa1lsAknMknckSS2xTuaidT0xJEcVaPcl7NOdbBhdjFtwV8lPHzY6sOmhyy1iU23MK_e49rxo_p0X7lQDyvGXrxxYwx-Tpyhb8YCX8UaO"/>
+<h2 class="font-headline-sm text-headline-sm text-primary">Julian Vance</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Doctoral Candidate</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary hover:backdrop-blur-md transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-primary text-on-primary rounded-xl scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Publications</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary hover:backdrop-blur-md transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span>Research</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary hover:backdrop-blur-md transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Archives</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:text-primary hover:backdrop-blur-md transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span>Contact</span>
+</a>
+</nav>
+</aside>
+<main class="lg:ml-64 pt-32 px-margin-mobile md:px-margin-desktop pb-24 max-w-screen-container-max mx-auto">
+<!-- Hero Section -->
+<header class="mb-16">
+<div class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md rounded-sm mb-4">VERIFIED REPOSITORY</div>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Academic Milestone Ledger</h1>
+<p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                A definitive collection of verified evidence documenting research progress, peer reviews, and institutional acknowledgments. Each entry serves as a formal testament to the rigorous academic standards of the doctoral journey.
+            </p>
+</header>
+<!-- Bento Grid Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Total Evidence Card -->
+<div class="glass-container ethereal-shadow p-8 flex flex-col justify-between min-h-[240px]">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-2">Total Evidence Pieces</h3>
+<p class="font-display-lg text-display-lg text-primary">142</p>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] transition-all duration-1000 ease-out"></div>
+</div>
+<p class="font-label-md text-label-md text-on-primary-container mt-2">85% Verification Threshold Reached</p>
+</div>
+<!-- Historical Verification Card -->
+<div class="glass-container ethereal-shadow p-0 overflow-hidden md:col-span-2 relative group flex flex-col md:flex-row">
+<div class="p-8 flex flex-col justify-center flex-1 z-10">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Historical Verification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Explore the chronological evolution of academic validation across five years of specialized research.</p>
+<button class="w-fit bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                        View Timeline <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover grayscale-[0.3] group-hover:scale-110 transition-transform duration-700" data-alt="An artistic close-up of aged parchment and modern architectural blueprints overlapping, illuminated by warm, directional side-lighting that highlights textures and fine script. The composition is clean and editorial, using a palette of creams, tans, and deep chocolate browns to represent the bridge between historical knowledge and contemporary academic inquiry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn2WKiRuwPamdIbysNxQ8qFGiGHCKDkK4j71Fb9yvn3Y5Pwy2GaG73Dz0m0cKirWNoPfecbUdENXAJDbKr2OEt9xf5iW7d2cIgxyx5vQcwtES1_PSpIK1p_dvSoPbhV4-x62Afng6SLGHC0TZtqfvrOyHNE1bbAqBXHS8L_7KfqZOk8fVDCr7h75jx0lmF4Cp7nAnnMiZFoZYZ88EnBy6eVp9CttllsGzJfN1Z4hLfVcIbCOKPD5xJvqV2xDA-WX74CFAjzyZYk2ZB"/>
+</div>
+</div>
+</section>
+<!-- Ledger Table Section -->
+<section class="glass-container ethereal-shadow overflow-hidden">
+<div class="p-8 border-b border-on-surface-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Ledger Records</h3>
+<div class="flex gap-2">
+<div class="relative">
+<input class="bg-surface-container-low border-none focus:ring-1 focus:ring-primary rounded-sm pl-10 pr-4 py-2 font-label-md text-label-md w-64" placeholder="Search milestones..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-sm" data-icon="search">search</span>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="p-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Assignment Name</th>
+<th class="p-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Classification</th>
+<th class="p-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-center">Status</th>
+<th class="p-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">Access</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-on-surface-variant/10">
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="p-6">
+<div class="font-headline-sm text-[18px] text-primary">Ethical Implications in Neural Networks</div>
+<div class="text-on-surface-variant text-sm">Case Study Analysis • Sept 2023</div>
+</td>
+<td class="p-6">
+<span class="px-2 py-1 bg-tertiary-fixed/50 text-on-tertiary-fixed text-xs font-label-md uppercase tracking-tighter">Theoretical Framework</span>
+</td>
+<td class="p-6 text-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    Verified
+                                </div>
+</td>
+<td class="p-6 text-right">
+<button class="p-2 hover:bg-white rounded-full transition-all group-hover:text-primary text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="p-6">
+<div class="font-headline-sm text-[18px] text-primary">Macroeconomic Stability Thesis</div>
+<div class="text-on-surface-variant text-sm">Primary Dissertation Draft • Jan 2024</div>
+</td>
+<td class="p-6">
+<span class="px-2 py-1 bg-tertiary-fixed/50 text-on-tertiary-fixed text-xs font-label-md uppercase tracking-tighter">Empirical Research</span>
+</td>
+<td class="p-6 text-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    Verified
+                                </div>
+</td>
+<td class="p-6 text-right">
+<button class="p-2 hover:bg-white rounded-full transition-all group-hover:text-primary text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="p-6">
+<div class="font-headline-sm text-[18px] text-primary">Quantum Computing Paradigms</div>
+<div class="text-on-surface-variant text-sm">Institutional Peer Review • March 2024</div>
+</td>
+<td class="p-6">
+<span class="px-2 py-1 bg-tertiary-fixed/50 text-on-tertiary-fixed text-xs font-label-md uppercase tracking-tighter">Applied Physics</span>
+</td>
+<td class="p-6 text-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    Verified
+                                </div>
+</td>
+<td class="p-6 text-right">
+<button class="p-2 hover:bg-white rounded-full transition-all group-hover:text-primary text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="p-6">
+<div class="font-headline-sm text-[18px] text-primary">Sociological Impact of Urban Density</div>
+<div class="text-on-surface-variant text-sm">Longitudinal Field Study • June 2023</div>
+</td>
+<td class="p-6">
+<span class="px-2 py-1 bg-tertiary-fixed/50 text-on-tertiary-fixed text-xs font-label-md uppercase tracking-tighter">Social Science</span>
+</td>
+<td class="p-6 text-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    Verified
+                                </div>
+</td>
+<td class="p-6 text-right">
+<button class="p-2 hover:bg-white rounded-full transition-all group-hover:text-primary text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 bg-surface-container-low/50 border-t border-on-surface-variant/10 flex justify-between items-center">
+<p class="font-label-md text-label-md text-on-surface-variant">Showing 4 of 142 records</p>
+<div class="flex gap-4">
+<button class="p-2 text-primary disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 text-primary hover:bg-white rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative bottom-0 w-full bg-surface dark:bg-inverse-surface border-t border-outline-variant/30 flex flex-col items-center py-12 px-margin-desktop gap-4">
+<div class="font-headline-sm text-headline-sm text-on-surface">Julian Vance</div>
+<div class="flex gap-8 mb-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Journal Index</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Curriculum Vitae</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Institutional Repository</a>
+</div>
+<p class="font-label-md text-label-md text-secondary dark:text-secondary-fixed text-center max-w-lg">
+            © 2024 Julian Vance. All Rights Reserved. Produced with Academic Rigor.
+        </p>
+</footer>
+<!-- Mobile Navigation Shell (Visible only on mobile) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-surface/60 backdrop-blur-3xl z-50 border-t border-on-surface-variant/10 px-6 py-3 flex justify-around">
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[10px] uppercase font-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[10px] uppercase font-label-md font-bold">Ledger</span>
+</button>
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] uppercase font-label-md">Profile</span>
+</button>
+</div>
+<script>
+        // Micro-interactions for table rows
+        document.querySelectorAll('tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.transform = 'translateY(-1px)';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Atmospheric parallax on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('img[data-alt*="parchment"]');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.05}px) scale(1.1)`;
+            }
+        });
+    </script>
+</body></html>
