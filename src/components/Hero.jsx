@@ -107,7 +107,7 @@ export default function Hero({ student, setActiveTab }) {
               />
               {/* Overlapping Name Sticker */}
               <div className="absolute bottom-5 left-5 rounded-full border border-primary/10 bg-white/80 px-4 py-1.5 shadow-[0_2px_10px_rgba(62,39,35,0.05)] backdrop-blur-md transition hover:bg-white/95">
-                <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Bảo Anh</span>
+                <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Nguyệt Ánh</span>
               </div>
             </div>
 
