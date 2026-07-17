@@ -3,18 +3,11 @@ import { portfolioData } from '../data/portfolioData';
 import AssignmentCard from './AssignmentCard';
 import AssignmentDetail from './AssignmentDetail';
 
-export default function ProjectsTab() {
+export default function ProjectsTab({ onPreview }) {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [previewData, setPreviewData] = useState({ isOpen: false, url: '', type: '' });
   const { projects } = portfolioData;
 
-  const openPreview = (event, url, type) => {
-    event.preventDefault();
-    setPreviewData({ isOpen: true, url, type });
-  };
-  const closePreview = () => setPreviewData({ isOpen: false, url: '', type: '' });
-
-  if (selectedProject) return <AssignmentDetail project={selectedProject} onBack={() => setSelectedProject(null)} previewData={previewData} onPreview={openPreview} onClosePreview={closePreview} />;
+  if (selectedProject) return <AssignmentDetail project={selectedProject} onBack={() => setSelectedProject(null)} onPreview={onPreview} />;
 
   return (
     <div>

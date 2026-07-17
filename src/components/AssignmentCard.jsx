@@ -25,7 +25,13 @@ export default function AssignmentCard({ project, onSelect }) {
       <p className="mt-4 text-sm leading-7 text-muted-dark">{project.shortDesc}</p>
       <div className="mt-6 flex flex-wrap gap-2">{project.skills?.slice(0, 3).map((skill) => <span key={skill} className="rounded-full border border-white/60 bg-white/35 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-muted-dark">{skill}</span>)}</div>
       <div className="mt-auto pt-7">
-        {isAvailable(project.report) ? <a href={project.report} target="_blank" rel="noreferrer" className="card-resource-link"><FileText size={13} /> Report</a> : <span className="card-resource-link opacity-50">Report pending</span>}
+        {project.reports ? (
+          <span className="card-resource-link"><FileText size={13} /> {project.reports.length} Bài thực hành</span>
+        ) : isAvailable(project.report) ? (
+          <a href={project.report} target="_blank" rel="noreferrer" className="card-resource-link"><FileText size={13} /> Report</a>
+        ) : (
+          <span className="card-resource-link opacity-50">Report pending</span>
+        )}
       </div>
       <button type="button" onClick={() => onSelect(project)} className="mt-3 flex min-h-12 items-center justify-between rounded-sm bg-primary px-4 text-[11px] font-bold uppercase tracking-[0.12em] text-white transition duration-200 hover:-translate-y-0.5 hover:bg-secondary active:scale-[0.98]">View Case Study <ArrowRight size={16} /></button>
       </div>

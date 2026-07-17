@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { X } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import HomeTab from './components/HomeTab';
 import ProjectsTab from './components/ProjectsTab';
@@ -18,16 +19,26 @@ const tabTitles = {
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [previewData, setPreviewData] = useState({ isOpen: false, url: '', type: '' });
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [activeTab]);
 
+  const openPreview = (event, url, type = 'pdf') => {
+    event.preventDefault();
+    setPreviewData({ isOpen: true, url, type });
+  };
+
+  const closePreview = () => {
+    setPreviewData({ isOpen: false, url: '', type: '' });
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case 'home': return <HomeTab setActiveTab={setActiveTab} />;
-      case 'projects': return <ProjectsTab />;
-      case 'evidence': return <EvidenceTable />;
+      case 'projects': return <ProjectsTab onPreview={openPreview} />;
+      case 'evidence': return <EvidenceTable onPreview={openPreview} />;
       case 'rubric': return <RubricTable />;
       case 'summary': return <Summary />;
       default: return <HomeTab setActiveTab={setActiveTab} />;
@@ -56,6 +67,28 @@ export default function App() {
           {renderContent()}
         </motion.main>
       </div>
+
+      {previewData.isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/55 p-3 backdrop-blur-md sm:p-6" role="dialog" aria-modal="true" aria-label="Xem trước">
+          <div className="glass-panel flex h-[90vh] w-full max-w-6xl flex-col overflow-hidden rounded-xl">
+            <div className="flex items-center justify-between border-b border-border-light px-5 py-4">
+              <div>
+                <p className="editorial-label">Preview</p>
+                <h3 className="mt-1 font-display text-2xl font-normal">Báo cáo PDF</h3>
+              </div>
+              <div className="flex gap-2">
+                <a href={previewData.url} target="_blank" rel="noreferrer" className="button-secondary">Mở thẻ mới</a>
+                <button type="button" aria-label="Đóng xem trước" onClick={closePreview} className="icon-button-dark">
+                  <X size={18} />
+                </button>
+              </div>
+            </div>
+            <div className="flex min-h-0 flex-1 items-center justify-center overflow-auto bg-surface/55 p-4">
+              <iframe src={previewData.url} title="PDF Preview" className="h-full w-full rounded-lg border-0 bg-white" />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

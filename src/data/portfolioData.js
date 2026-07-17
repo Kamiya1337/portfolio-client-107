@@ -23,84 +23,134 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Bài 1: Máy tính và quản lý tệp/thư mục",
+      title: "Bài 1: Máy tính và các thiết bị ngoại vi",
       chapter: "Chương 1 & 2",
-      shortDesc: "Tổ chức không gian làm việc số và thiết lập quy tắc quản lý dữ liệu cá nhân.",
-      skills: ["Quản lý hệ điều hành", "Tổ chức dữ liệu", "Quy tắc đặt tên"],
-      target: "Trình bày cấu trúc thư mục tối ưu và quy tắc đặt tên tệp đã thiết lập.",
-      process: "Phân tích nhu cầu lưu trữ học tập, thiết lập cây thư mục theo môn học/kỳ học. Áp dụng quy tắc đặt tên file không dấu, dùng gạch dưới để dễ dàng tìm kiếm.",
-      evidenceImg: "/images/Bài 1.png",
-      report: "/docs/bai-1.pdf",
+      shortDesc: "Thực hành thao tác hệ điều hành và tổ chức cây thư mục lưu trữ khoa học.",
+      skills: ["Hệ điều hành", "Quản lý tệp", "Tổ chức thư mục"],
+      target: "Làm quen với thao tác cơ bản trên máy tính, tệp tin và so sánh các đặc điểm của hệ điều hành phổ biến.",
+      process: "Tìm hiểu cấu trúc ổ đĩa, thực hiện các thao tác tạo lập, phân loại và lưu trữ tệp tin. So sánh sự khác nhau giữa Windows, macOS và Linux.",
+      report: "/docs/module-1/bt-1.pdf",
+      reports: [
+        {
+          name: "Bài tập 1: Thao tác cơ bản với tệp tin và thư mục (Bài tập bắt buộc - Tính điểm cuối kì)",
+          file: "/docs/module-1/bt-1.pdf"
+        },
+        {
+          name: "Bài tập 2: Tìm hiểu và so sánh các hệ điều hành (Bài tập bổ trợ)",
+          file: "/docs/module-1/bt-2.pdf"
+        }
+      ],
       status: "Đang hoàn thiện"
     },
     {
       id: 2,
-      title: "Bài 2: Khai thác dữ liệu và đánh giá thông tin",
+      title: "Bài 2: Khai thác dữ liệu và thông tin",
       chapter: "Chương 2",
-      shortDesc: "Áp dụng toán tử tìm kiếm nâng cao và đánh giá nguồn tin học thuật.",
-      skills: ["Toán tử tìm kiếm", "Đánh giá CRAAP", "Phân tích tin giả"],
-      target: "Trình bày kết quả tìm kiếm học thuật bằng các toán tử nâng cao và bảng đánh giá nguồn tin.",
-      process: "Sử dụng Google Scholar kết hợp các toán tử (AND, OR, filetype:pdf) để tìm tài liệu về thiết kế vi mạch. Lọc và đánh giá 3 nguồn tài liệu dựa trên 5 tiêu chí CRAAP (Độ mới, Mức độ phù hợp, Thẩm quyền, Độ chính xác, Mục đích).",
-      evidenceImg: "/images/Bài 2.png",
-      report: "/docs/bai-2.pdf",
+      shortDesc: "Quản lý thông tin số cá nhân, sử dụng toán tử nâng cao và đánh giá nguồn tin học thuật.",
+      skills: ["Quản lý dữ liệu", "Tìm kiếm thông tin", "Đánh giá CRAAP", "Phân tích AI"],
+      target: "Nắm vững kỹ năng lưu trữ đám mây, sử dụng cú pháp tìm kiếm nâng cao, thẩm định độ tin cậy của thông tin mạng và tổng hợp bằng AI.",
+      process: "Thiết lập cấu trúc thư mục lưu trữ khoa học trên Google Drive/OneDrive. Áp dụng các toán tử tìm kiếm chuyên nghiệp, đánh giá nguồn tài liệu bằng quy chuẩn CRAAP và dùng AI phân tích tóm tắt bài báo khoa học.",
+      report: "/docs/module-2/bt-2.pdf",
+      reports: [
+        {
+          name: "Bài tập 1: Tổ chức và quản lý dữ liệu cá nhân (Bài tập bổ trợ)",
+          file: "/docs/module-2/bt-1.pdf"
+        },
+        {
+          name: "Bài tập 2: Tìm kiếm và đánh giá thông tin học thuật (Bài tập bắt buộc - Tính điểm cuối kì)",
+          file: "/docs/module-2/bt-2.pdf"
+        },
+        {
+          name: "Bài tập 3: Sử dụng công cụ tìm kiếm nâng cao (Bài tập bổ trợ)",
+          file: "/docs/module-2/bt-3.pdf"
+        },
+        {
+          name: "Bài tập 4: Phân tích và tổng hợp thông tin với sự hỗ trợ của AI (Bài tập bổ trợ)",
+          file: "/docs/module-2/bt-4.pdf"
+        }
+      ],
       status: "Đang hoàn thiện"
     },
     {
       id: 3,
-      title: "Bài 3: Viết prompt hiệu quả và sử dụng AI",
+      title: "Bài 3: Tổng quan về trí tuệ nhân tạo",
       chapter: "Chương 3",
-      shortDesc: "Kỹ thuật giao tiếp với mô hình ngôn ngữ lớn (LLMs).",
-      skills: ["Prompt Engineering", "Tư duy phân tích", "Sử dụng GenAI"],
-      target: "So sánh giữa Prompt ban đầu và Prompt cải tiến cùng kết quả đầu ra từ AI.",
-      process: "Thiết lập cấu trúc prompt bao gồm: Vai trò (Role), Ngữ cảnh (Context), Nhiệm vụ (Task) và Định dạng đầu ra (Format). Thử nghiệm nhờ AI giải thích một khái niệm vật lý bán dẫn và so sánh kết quả trước/sau khi tối ưu prompt.",
-      evidenceImg: "/images/Bài 3.png",
-      report: "/docs/bai-3.pdf",
+      shortDesc: "Kỹ năng Prompt Engineering tối ưu cho các hoạt động học tập và nghiên cứu.",
+      skills: ["Prompt Engineering", "Mô hình ngôn ngữ lớn", "Tối ưu hóa học tập"],
+      target: "Làm chủ phương pháp xây dựng câu lệnh (prompt) có cấu trúc để khai thác tốt nhất các mô hình ngôn ngữ lớn.",
+      process: "Thiết kế các mẫu prompt theo cấu trúc vai trò, ngữ cảnh, nhiệm vụ để hỗ trợ giải quyết bài tập dịch thuật, viết luận và tóm tắt kiến thức.",
+      report: "/docs/module-3/bt2.pdf",
+      reports: [
+        {
+          name: "Bài tập 2: Viết Prompt hiệu quả cho các tác vụ học tập (Bài tập bắt buộc - Tính điểm cuối kì)",
+          file: "/docs/module-3/bt2.pdf"
+        }
+      ],
       status: "Đang hoàn thiện"
     },
     {
       id: 4,
-      title: "Bài 4: Hợp tác trực tuyến trong môi trường số",
+      title: "Bài 4: Giao tiếp và hợp tác trong môi trường số",
       chapter: "Chương 4",
-      shortDesc: "Sử dụng các nền tảng số để quản lý dự án và làm việc nhóm.",
-      skills: ["Quản lý dự án", "Giao tiếp số", "Công cụ hợp tác (Google Workspace/Notion)"],
-      target: "Trình bày minh chứng về việc sử dụng công cụ quản lý dự án nhóm và cách phối hợp.",
-      process: "Thiết lập không gian làm việc chung. Phân chia task rõ ràng, đặt deadline và theo dõi tiến độ qua bảng Kanban. Tổ chức họp nhóm qua Google Meet và ghi biên bản họp trực tuyến.",
-      evidenceImg: "/images/Bài 4.png",
-      report: "/docs/bai-4.pdf",
+      shortDesc: "Sử dụng các công cụ cộng tác đám mây để tối ưu hóa tiến độ làm việc nhóm.",
+      skills: ["Hợp tác số", "Quản lý nhóm", "Google Workspace", "Notion/Trello"],
+      target: "Tổ chức không gian làm việc số chia sẻ, lập kế hoạch và theo dõi công việc nhóm trực quan.",
+      process: "Xây dựng bảng Kanban theo dõi công việc, cộng tác soạn thảo tài liệu đồng thời trên đám mây và lưu trữ tài nguyên nhóm tập trung.",
+      report: "/docs/module-4/bt3.pdf",
+      reports: [
+        {
+          name: "Bài tập 3: Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm (Bài tập bắt buộc - Tính điểm cuối kì)",
+          file: "/docs/module-4/bt3.pdf"
+        }
+      ],
       status: "Đang hoàn thiện"
     },
     {
       id: 5,
-      title: "Bài 5: Sáng tạo nội dung số với AI",
+      title: "Bài 5: Sáng tạo nội dung số",
       chapter: "Chương 5",
-      shortDesc: "Tạo ra các sản phẩm truyền thông số có sự hỗ trợ của Trí tuệ nhân tạo.",
-      skills: ["Thiết kế số", "Tạo sinh hình ảnh/văn bản", "Công cụ thiết kế AI"],
-      target: "Trưng bày sản phẩm nội dung số hoàn thiện được hỗ trợ bởi AI.",
-      process: "Lên ý tưởng kịch bản bằng Gemini Pro. Sử dụng các công cụ tạo sinh (Midjourney/D-ALL E hoặc Canva AI) để thiết kế hình ảnh minh họa cho một bài thuyết trình về công nghệ. Tinh chỉnh thiết kế thủ công để đạt độ hoàn thiện cao.",
-      evidenceImg: "/images/Bài 5.png",
-      report: "/docs/bai-5.pdf",
+      shortDesc: "Quy trình thiết kế sản phẩm đa phương tiện kết hợp công cụ AI tạo sinh hình ảnh và âm thanh.",
+      skills: ["Sáng tạo nội dung", "AI sinh ảnh", "Multimedia Design"],
+      target: "Lập kế hoạch nội dung truyền thông và ứng dụng AI tạo tác phẩm số dưới sự kiểm duyệt chất lượng của tác giả.",
+      process: "Viết kịch bản nội dung, sử dụng AI hỗ trợ phác thảo hình ảnh nghệ thuật và biên tập hoàn thiện ấn phẩm đa phương tiện.",
+      report: "/docs/module-5/bt2.pdf",
+      reports: [
+        {
+          name: "Bài tập 1: Lập kế hoạch và sáng tạo nội dung số đa phương tiện (Bài tập bổ trợ)",
+          file: "/docs/module-5/bt1.pdf"
+        },
+        {
+          name: "Bài tập 2: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung (Bài tập bắt buộc - Tính điểm cuối kì)",
+          file: "/docs/module-5/bt2.pdf"
+        }
+      ],
       status: "Đang hoàn thiện"
     },
     {
       id: 6,
-      title: "Bài 6: An toàn số, liêm chính học thuật và AI có trách nhiệm",
+      title: "Bài 6: An toàn và liêm chính học thuật trong môi trường số",
       chapter: "Chương 6",
-      shortDesc: "Hiểu và áp dụng các quy tắc đạo đức khi sử dụng công nghệ và AI.",
-      skills: ["Bảo mật thông tin", "Trích dẫn tài liệu", "Đạo đức AI"],
-      target: "Trình bày bộ nguyên tắc cá nhân về sử dụng AI có trách nhiệm dựa trên các nghiên cứu.",
-      process: "Nghiên cứu các quy định về đạo văn và liêm chính. Đúc kết bộ 5 nguyên tắc cá nhân: Luôn kiểm chứng thông tin do AI tạo ra, minh bạch công cụ sử dụng, không dùng AI để thi hộ/làm hộ 100%, bảo vệ dữ liệu cá nhân khi chat với AI, và tôn trọng bản quyền.",
-      evidenceImg: "/images/Bài 6.png",
-      report: "/docs/bai-6.pdf",
+      shortDesc: "Đạo đức học thuật và nguyên tắc sử dụng AI có trách nhiệm trong môi trường đại học.",
+      skills: ["An toàn thông tin", "Liêm chính học thuật", "Sử dụng AI có trách nhiệm"],
+      target: "Xây dựng bản nguyên tắc và cam kết đạo đức cá nhân khi tích hợp AI vào học tập.",
+      process: "Nghiên cứu các rủi ro bảo mật số cá nhân và quy định đạo đức sử dụng AI chống đạo văn trong học tập.",
+      report: "/docs/module-6/bt4.pdf",
+      reports: [
+        {
+          name: "Bài tập 4: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu (Bài tập bắt buộc - Tính điểm cuối kì)",
+          file: "/docs/module-6/bt4.pdf"
+        }
+      ],
       status: "Đang hoàn thiện"
     }
   ],
   rubric: [
     { criteria: "Thiết kế và cấu trúc Portfolio", excellent: "Chuyên nghiệp, sáng tạo, điều hướng tốt, UI/UX hiện đại.", status: "Hoàn thiện 90%", action: "Bổ sung ảnh minh họa thực tế" },
-    { criteria: "Bài 1: Quản lý tệp/thư mục", excellent: "Cấu trúc tối ưu, quy tắc đặt tên rõ ràng, minh họa sắc nét.", status: "Chưa có ảnh", action: "Chụp ảnh màn hình cấu trúc thư mục trên máy tính" },
-    { criteria: "Bài 2: Tìm kiếm & Đánh giá", excellent: "Bảng đánh giá CRAAP chi tiết, dùng toán tử nâng cao hiệu quả.", status: "Đang viết báo cáo", action: "Hoàn thiện file PDF báo cáo CRAAP" },
-    { criteria: "Bài 3: Viết Prompt hiệu quả", excellent: "So sánh rõ ràng trước/sau, phân tích lỗi và cải tiến sâu sắc.", status: "Thiếu dữ liệu", action: "Chụp ảnh màn hình đoạn chat với AI" },
-    { criteria: "Bài 4: Hợp tác trực tuyến", excellent: "Minh chứng rõ việc chia task, họp nhóm và quản lý tiến độ.", status: "Thiếu dữ liệu", action: "Chụp ảnh Trello/Notion nhóm" },
-    { criteria: "Bài 5: Sáng tạo nội dung với AI", excellent: "Sản phẩm đẹp, sáng tạo, trích dẫn rõ phần nào dùng AI.", status: "Chưa có sản phẩm", action: "Upload video/hình ảnh hoàn thiện" },
-    { criteria: "Bài 6: AI có trách nhiệm", excellent: "Bộ nguyên tắc cá nhân chặt chẽ, tư duy phản biện cao.", status: "Đang soạn thảo", action: "Viết chi tiết bộ 5 nguyên tắc ra Word" },
+    { criteria: "Bài 1: Máy tính và các thiết bị ngoại vi", excellent: "Cấu trúc tối ưu, quy tắc đặt tên rõ ràng, minh họa sắc nét.", status: "Hoàn thiện 100%", action: "Đã đồng bộ đầy đủ" },
+    { criteria: "Bài 2: Khai thác dữ liệu và thông tin", excellent: "Nộp đầy đủ các bài thực hành học phần theo quy định.", status: "Hoàn thiện 100%", action: "Đã đồng bộ đầy đủ" },
+    { criteria: "Bài 3: Tổng quan về trí tuệ nhân tạo", excellent: "So sánh rõ ràng trước/sau, phân tích lỗi và cải tiến sâu sắc.", status: "Hoàn thiện 100%", action: "Đã đồng bộ đầy đủ" },
+    { criteria: "Bài 4: Giao tiếp và hợp tác trong môi trường số", excellent: "Minh chứng rõ việc chia task, họp nhóm và quản lý tiến độ.", status: "Hoàn thiện 100%", action: "Đã đồng bộ đầy đủ" },
+    { criteria: "Bài 5: Sáng tạo nội dung số", excellent: "Sản phẩm đẹp, sáng tạo, trích dẫn rõ phần nào dùng AI.", status: "Hoàn thiện 100%", action: "Đã đồng bộ đầy đủ" },
+    { criteria: "Bài 6: An toàn và liêm chính học thuật trong môi trường số", excellent: "Bộ nguyên tắc cá nhân chặt chẽ, tư duy phản biện cao.", status: "Hoàn thiện 100%", action: "Đã đồng bộ đầy đủ" },
   ]
 };
